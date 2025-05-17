@@ -78,7 +78,7 @@ export default function Register() {
                   type="password"
                   required
                   placeholder="Password"
-                  className="w-full px-3 py-2 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  className="w-full px-3 py-2 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm text-black"
                 />
               </div>
             </div>
