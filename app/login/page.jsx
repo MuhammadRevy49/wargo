@@ -60,7 +60,7 @@ export default function Login() {
                 />
               </div>
               <div className="pt-4">
-                <label htmlFor="password" className="sr-only">Password</label>
+                <label htmlFor="password" className="sr-only text-black">Password</label>
                 <input
                   id="password"
                   name="password"
