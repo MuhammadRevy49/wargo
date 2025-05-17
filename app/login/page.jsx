@@ -43,8 +43,8 @@ export default function Login() {
       </div>
 
       {/* Form login */}
-      <BackToHomeButton/>
       <div className="flex flex-1 items-center justify-center px-6 py-12 bg-white">
+        <BackToHomeButton/>
         <div className="max-w-md w-full space-y-8">
           <h2 className="text-center text-3xl font-extrabold text-gray-900">Masuk ke akun Anda</h2>
           <form className="mt-8 space-y-6" action="#" method="POST">
