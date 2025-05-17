@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Store, Send, PackageCheck, Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const images = [
   'https://awsimages.detik.net.id/community/media/visual/2021/06/27/warung-pintar_169.jpeg?w=1200',
@@ -42,9 +43,9 @@ export default function LandingPage() {
         <div className="hidden sm:flex space-x-4">
           <a href="#tentang" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Tentang</a>
           <a href="#fitur" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Fitur</a>
-          <button className="bg-green-600 font-bold text-white hover:bg-green-700 rounded py-1 px-2 transition-all drop-shadow-md">
+          <Link href="/login" className="bg-green-600 font-bold text-white hover:bg-green-700 rounded py-1 px-2 transition-all drop-shadow-md">
             Daftar / Masuk
-          </button>
+          </Link>
         </div>
 
         {/* Hamburger menu for mobile */}
@@ -72,9 +73,9 @@ export default function LandingPage() {
         <nav className="flex flex-col space-y-4">
           <a href="#tentang" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Tentang</a>
           <a href="#fitur" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Fitur</a>
-          <button className="bg-green-600 text-white px-4 py-2 rounded mt-4" onClick={() => setSidebarOpen(false)}>
+          <Link href="/login" className="bg-green-600 text-white px-4 py-2 rounded mt-4" onClick={() => setSidebarOpen(false)}>
             Daftar / Masuk
-          </button>
+          </Link>
         </nav>
       </motion.div>
 
