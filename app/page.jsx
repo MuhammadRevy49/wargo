@@ -73,7 +73,7 @@ export default function LandingPage() {
         <nav className="flex flex-col space-y-4">
           <a href="#tentang" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Tentang</a>
           <a href="#fitur" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Fitur</a>
-          <Link href="/login" className="bg-green-600 text-white px-4 py-2 rounded mt-4" onClick={() => setSidebarOpen(false)}>
+          <Link href="/login" className="bg-green-600 text-center text-white px-4 py-2 rounded mt-4" onClick={() => setSidebarOpen(false)}>
             Daftar / Masuk
           </Link>
         </nav>
