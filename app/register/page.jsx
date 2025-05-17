@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import BackToHomeButton from '../components/buttonBack';
 
 const images = [
   'https://awsimages.detik.net.id/community/media/visual/2021/06/27/warung-pintar_169.jpeg?w=1200',
@@ -43,6 +44,7 @@ export default function Register() {
       </div>
 
       {/* Form register */}
+      <BackToHomeButton/>
       <div className="flex flex-1 items-center justify-center px-6 py-12 bg-white">
         <div className="max-w-md w-full space-y-8">
           <h2 className="text-center text-3xl font-extrabold text-gray-900">Daftar Akun Baru</h2>
