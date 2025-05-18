@@ -35,9 +35,9 @@ export default function Login() {
         ))}
         <div className="absolute inset-0 bg-black opacity-50 z-33"></div>
         <div className="absolute bottom-6 left-6 text-white z-36 max-w-xs">
-          <h1 className="text-2xl font-bold mb-1">Selamat Datang di WarGo</h1>
+          <h1 className="text-2xl font-bold mb-1">Selamat Datang di War<span className="text-green-600">Go</span></h1>
           <p className="text-sm md:text-base">
-            Platform terbaik untuk penghubung para pelaku usaha dengan warung / toko.
+            Raih banyak keuntungan untuk warung / toko anda di platform kami.
           </p>
         </div>
       </div>

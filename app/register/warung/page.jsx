@@ -35,9 +35,9 @@ export default function Register() {
         ))}
         <div className="absolute inset-0 bg-black opacity-50 z-20"></div>
         <div className="absolute bottom-6 left-6 text-white z-20 max-w-xs">
-          <h1 className="text-3xl font-bold mb-2">Bergabunglah dengan WarGo</h1>
+          <h1 className="text-3xl font-bold mb-2">Bergabunglah dengan War<span className="text-green-600">Go</span></h1>
           <p className="text-sm md:text-base">
-            Buka peluang untuk UMKM dan dapatkan keuntungan banyak untuk warung anda.
+            Raih banyak keuntungan untuk warung / toko anda di platform kami.
           </p>
         </div>
       </div>
