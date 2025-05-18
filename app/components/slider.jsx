@@ -7,9 +7,9 @@ import 'swiper/css/pagination';
 
 export default function SliderImage() {
     const images = [
-        "https://www.figma.com/community/resource/5c7f9ef0-7aac-4e47-b9bc-fec3c3a35ef4/thumbnail",
-        "https://www.shutterstock.com/image-photo/makassar-indonesia-10-april-2020-260nw-1699405885.jpg",
-        "https://pasardana.id/media/65796/img-20241113-wa0054.jpg?crop=0,0.15202231520223142,0.0000000000000008842309600570,0.0000000000000007610834324460&cropmode=percentage&width=675&height=380&rnd=133759869670000000",
+        'https://awsimages.detik.net.id/community/media/visual/2021/06/27/warung-pintar_169.jpeg?w=1200',
+        'https://cobisnis.com/wp-content/uploads/2021/11/images-6-1.jpeg',
+        'https://www.bee.id/wp-content/uploads/2020/04/Bisnis-Lebih-Mudah-Gunakan-Aplikasi-Warung-ini.jpg',
     ];
     return (
         <>
@@ -22,13 +22,14 @@ export default function SliderImage() {
                             <button className="px-3 py-2 text-green-600"><Search /></button>
                             <input
                                 type="search"
-                                placeholder="Cari warung / toko"
+                                placeholder="Cari disini..."
                                 className="w-full px-2 py-2 text-sm text-black focus:outline-none"
                             />
                             <button className="bg-green-600 text-white px-4 py-3 text-sm hover:bg-green-700 transition-all duration-300">
                                 Cari
                             </button>
                         </div>
+                        <div className="absolute inset-0 bg-black opacity-50 -z-23"></div>
                     </div>
                 </div>
 

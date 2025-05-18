@@ -3,10 +3,10 @@ import SliderImage from "../components/slider";
 
 export default function Warung() {
   return (
-    <div className="bg-white">
+    <div className="bg-white h-screen">
       <SliderImage />
       <div className="px-4 py-6">
-        <h1 className="text-xl sm:text-2xl font-bold mb-4 text-center">
+        <h1 className="text-xl sm:text-2xl font-bold mb-4 text-center text-gray-700">
           Cari Produk Untuk Jualan <span className="text-green-600">Disini.</span>
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center max-w-3xl mx-auto">
@@ -14,9 +14,9 @@ export default function Warung() {
           <div>
             <label className="block mb-1 font-medium text-sm text-gray-700">Kota</label>
             <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring focus:ring-green-600">
-              <option className="bg-white">Cimahi</option>
-              <option>Bandung</option>
-              <option>Jakarta</option>
+              <option className="bg-white text-black">Cimahi</option>
+              <option className="bg-white text-black">Bandung</option>
+              <option className="bg-white text-black">Jakarta</option>
             </select>
           </div>
 
