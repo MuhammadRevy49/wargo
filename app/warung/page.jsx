@@ -20,6 +20,9 @@ export default function Warung() {
             <X />
           </button>
         </div>
+        <div className={`justify-center items-center ${sidebarOpen ? 'hidden' : 'flex'}`}>
+          <h1 className="font-bold text-2xl">War<span className="text-green-600">GO</span></h1>
+        </div>
         <div className="space-y-4 mt-4">
           <a href="#" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><Home className="mr-2"/>Dashboard</a>
           <a href="#" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><BoxIcon className="mr-2"/>Produk</a>
@@ -57,6 +60,7 @@ export default function Warung() {
             <div>
               <label className="block mb-1 font-medium text-sm text-gray-700">Kota</label>
               <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring focus:ring-green-600 text-black">
+                <option className="bg-white text-black">Semua</option>
                 <option className="bg-white text-black">Cimahi</option>
                 <option className="bg-white text-black">Bandung</option>
                 <option className="bg-white text-black">Jakarta</option>
@@ -66,22 +70,22 @@ export default function Warung() {
             {/* Jenis Produk */}
             <div>
               <label className="block mb-1 font-medium text-sm text-gray-700">Jenis Produk</label>
-              <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
-                <option>Semua</option>
-                <option>Makanan Snack</option>
-                <option>Makanan Berat</option>
-                <option>Minuman Kemasan</option>
-                <option>Minuman Fresh</option>
+              <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-600 text-black">
+                <option className="bg-white text-black">Semua</option>
+                <option className="bg-white text-black">Makanan Snack</option>
+                <option className="bg-white text-black">Makanan Berat</option>
+                <option className="bg-white text-black">Minuman Kemasan</option>
+                <option className="bg-white text-black">Minuman Fresh</option>
               </select>
             </div>
 
             {/* Status Buka */}
             <div>
               <label className="block mb-1 font-medium text-sm text-gray-700">Status</label>
-              <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring focus:ring-green-600">
-                <option>Semua</option>
-                <option>Buka</option>
-                <option>Tutup</option>
+              <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring focus:ring-green-600 text-black">
+                <option className="bg-white text-black">Semua</option>
+                <option className="bg-white text-black">Buka</option>
+                <option className="bg-white text-black">Tutup</option>
               </select>
             </div>
           </div>

@@ -29,7 +29,6 @@ export default function SliderImage() {
                                 Cari
                             </button>
                         </div>
-                        <div className="absolute inset-0 bg-black opacity-50 -z-23"></div>
                     </div>
                 </div>
 
