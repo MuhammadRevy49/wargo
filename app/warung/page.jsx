@@ -8,7 +8,7 @@ export default function WarungPage() {
     <SidebarLayout>
       <SliderImage />
       <div className="p-4">
-        <h1 className="text-xl sm:text-2xl font-bold mb-4 text-center text-gray-700">
+        <h1 className="text-xl sm:text-2xl font-bold mb-4 text-center text-gray-800">
           Cari Produk Untuk Jualan <span className="text-green-600">Disini.</span>
         </h1>
         {/* Filter */}

@@ -6,30 +6,30 @@ import SidebarLayout from '../components/sidebarLayouts';
 
 export default function WarungDashboard() {
     const [products, setProducts] = useState([
-        { id: 1, name: 'Keripik Pisang', sender: 'UMKM Maju Jaya', status: 'Menunggu' },
-        { id: 2, name: 'Sambal Roa', sender: 'UMKM Pedas Nikmat', status: 'Diterima' },
-        { id: 3, name: 'Brownies Kukus', sender: 'UMKM ChocoLove', status: 'Menunggu' },
+        { id: 1, name: 'Keripik Pisang', sender: 'UMKM Maju Jaya', status: 'lapor' },
+        { id: 2, name: 'Sambal Roa', sender: 'UMKM Pedas Nikmat', status: 'lapor' },
+        { id: 3, name: 'Brownies Kukus', sender: 'UMKM ChocoLove', status: 'lapor' },
     ]);
 
     return (
         <SidebarLayout>
             <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl font-bold mb-6 text-green-700 text-center">Daftar Titipan</h1>
+                    <h1 className="text-2xl font-bold mb-6 text-green-700 text-center"><span className="text-gray-800">Daftar</span> Titipan</h1>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div className="bg-white shadow-md rounded-xl p-4 flex items-center gap-4">
                             <Boxes className="w-8 h-8 text-green-600" />
                             <div>
                                 <p className="text-sm text-gray-500">Total Titipan Produk</p>
-                                <p className="font-bold text-lg">{products.length}</p>
+                                <p className="font-bold text-lg text-gray-800">{products.length}</p>
                             </div>
                         </div>
                         <div className="bg-white shadow-md rounded-xl p-4 flex items-center gap-4">
                             <PackageCheck className="w-8 h-8 text-green-600" />
                             <div>
                                 <p className="text-sm text-gray-500">Sudah Diterima</p>
-                                <p className="font-bold text-lg">{products.filter(p => p.status === 'Diterima').length}</p>
+                                <p className="font-bold text-lg text-gray-800">{products.filter(p => p.status === 'Diterima').length}</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export default function WarungDashboard() {
                                         <p className="text-gray-500">Dari: {product.sender}</p>
                                     </div>
                                     <span
-                                        className={`px-3 py-1 text-xs rounded-full font-medium ${product.status === 'Diterima'
+                                        className={`px-3 py-1 text-xs rounded-full font-medium ${product.status === 'lapor'
                                                 ? 'bg-green-100 text-green-700'
                                                 : 'bg-yellow-100 text-yellow-700'
                                             }`}
