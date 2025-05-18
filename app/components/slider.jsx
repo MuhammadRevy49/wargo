@@ -23,7 +23,7 @@ export default function SliderImage() {
                             <input
                                 type="search"
                                 placeholder="Cari warung / toko"
-                                className="w-full px-2 py-2 text-sm focus:outline-none"
+                                className="w-full px-2 py-2 text-sm text-black focus:outline-none"
                             />
                             <button className="bg-green-600 text-white px-4 py-3 text-sm hover:bg-green-700 transition-all duration-300">
                                 Cari

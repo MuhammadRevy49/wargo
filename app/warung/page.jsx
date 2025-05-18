@@ -3,11 +3,11 @@ import SliderImage from "../components/slider";
 
 export default function Warung() {
   return (
-    <>
+    <div className="bg-white">
       <SliderImage />
       <div className="px-4 py-6">
         <h1 className="text-xl sm:text-2xl font-bold mb-4 text-center">
-          Cari Warung / Toko <span className="text-green-600">Disini.</span>
+          Cari Produk Untuk Jualan <span className="text-green-600">Disini.</span>
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center max-w-3xl mx-auto">
           {/* Kota */}
@@ -22,13 +22,13 @@ export default function Warung() {
 
           {/* Jenis Warung */}
           <div>
-            <label className="block mb-1 font-medium text-sm text-gray-700">Jenis Warung</label>
+            <label className="block mb-1 font-medium text-sm text-gray-700">Jenis Produk</label>
             <select className="w-full p-2 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-green-600">
               <option>Semua</option>
-              <option>Warung Sembako</option>
-              <option>Warung Makan</option>
-              <option>Toko Kelontong</option>
-              <option>Minimarket</option>
+              <option>Makanan Snack</option>
+              <option>Makanan Berat</option>
+              <option>Minuman Kemasan</option>
+              <option>Minuman Fresh</option>
             </select>
           </div>
 
@@ -43,6 +43,6 @@ export default function Warung() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
