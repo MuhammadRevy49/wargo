@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Store, Send, PackageCheck, Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -16,6 +16,7 @@ export default function LandingPage() {
   const [prev, setPrev] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,14 +39,17 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4 z-33 transition-all ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <h1 className={`text-xl font-bold ${scrolled ? 'text-green-600' : 'text-white'}`}>WarGo</h1>
-        
+
         {/* Desktop menu */}
         <div className="hidden sm:flex space-x-4">
           <a href="#tentang" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Tentang</a>
           <a href="#fitur" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Fitur</a>
-          <Link href="/login" className="bg-green-600 font-bold text-white hover:bg-green-700 rounded py-1 px-2 transition-all drop-shadow-md">
+          <button
+            onClick={() => setShowModal(true)}
+            className="bg-green-600 font-bold text-white hover:bg-green-700 rounded py-1 px-2 transition-all drop-shadow-md"
+          >
             Daftar / Masuk
-          </Link>
+          </button>
         </div>
 
         {/* Hamburger menu for mobile */}
@@ -70,12 +74,18 @@ export default function LandingPage() {
             <X className="text-green-600" />
           </button>
         </div>
-        <nav className="flex flex-col space-y-4">
+        <nav className="flex flex-col space-y-4 ">
           <a href="#tentang" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Tentang</a>
           <a href="#fitur" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Fitur</a>
-          <Link href="/login" className="bg-green-600 text-center text-white px-4 py-2 rounded mt-4" onClick={() => setSidebarOpen(false)}>
+          <button
+            onClick={() => {
+              setSidebarOpen(false);
+              setShowModal(true);
+            }}
+            className="bg-green-600 text-center text-white px-4 py-2 rounded mt-4"
+          >
             Daftar / Masuk
-          </Link>
+          </button>
         </nav>
       </motion.div>
 
@@ -124,7 +134,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.4 }}
           >
-            <button className="bg-green-600 bg-opacity-90 text-white px-6 py-2 hover:bg-green-700 rounded drop-shadow-md">
+            <button className="bg-green-600 bg-opacity-90 text-white px-6 py-2 hover:bg-green-700 rounded drop-shadow-md transition-all">
               Mulai Sekarang
             </button>
           </motion.div>
@@ -157,6 +167,51 @@ export default function LandingPage() {
       <footer className="bg-green-600 text-white py-6 text-center relative z-10">
         <p>&copy; {new Date().getFullYear()} WarGo. Semua hak dilindungi.</p>
       </footer>
+
+      {/* Modal Pilihan Pengguna */}
+      <AnimatePresence>
+        {showModal && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-lg p-6 max-w-sm w-full shadow-lg relative"
+            >
+              <button
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                onClick={() => setShowModal(false)}
+              >
+                <X />
+              </button>
+              <div className="flex justify-center text-center pb-2 font-bold">
+                <h1 className="text-2xl">War<span className="text-green-600">GO</span></h1>
+              </div>
+              <h3 className="text-sm font-bold text-gray-800 mb-4">Pilih Jenis Pengguna</h3>
+              <div className="flex flex-col space-y-4">
+                <Link
+                  href="/login"
+                  className="bg-green-600 text-white text-center py-2 rounded hover:bg-green-700 transition"
+                >
+                  Saya Pemilik Warung / Toko
+                </Link>
+                <Link
+                  href="/login"
+                  className="bg-green-600 text-white text-center py-2 rounded hover:bg-green-700 transition"
+                >
+                  Saya Pelaku UMKM
+                </Link>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
