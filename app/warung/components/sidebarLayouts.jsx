@@ -26,7 +26,7 @@ export default function SidebarLayout({ children }) {
         <div className="space-y-4 mt-4">
           <Link href="/warung" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><Home className="mr-2"/>Beranda</Link>
           <Link href="/warung/dashboard" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><LayoutDashboard className="mr-2"/>Dashboard</Link>
-          <Link href="/warung/pesanan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ClipboardList className="mr-2"/>Pesanan</Link>
+          <Link href="/warung/titipan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ClipboardList className="mr-2"/>Titipan</Link>
           <Link href="/warung/akun" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><User className="mr-2"/>Akun</Link>
         </div>
       </div>
