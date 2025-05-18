@@ -44,7 +44,7 @@ export default function Login() {
 
       {/* Form login */}
       <div className="flex flex-1 items-center justify-center px-6 py-12 bg-white">
-        <BackToHomeButton/>
+        <BackToHomeButton />
         <div className="max-w-md w-full space-y-8">
           <h2 className="text-center text-3xl font-extrabold text-gray-900">Masuk ke Toko Anda</h2>
           <form className="mt-8 space-y-6" action="#" method="POST">
@@ -85,13 +85,19 @@ export default function Login() {
             </div>
           </form>
 
-          <div className="text-center text-sm text-gray-600 flex justify-center">
-            <p>Belum punya akun?{' '}</p>
-            <Link href="/register/warung">
-              <p className="ml-1 font-medium text-green-600 hover:text-green-700">
-                Daftar
-              </p>
-            </Link>
+          <div className="text-center text-sm text-gray-600 flex flex-col items-center justify-center">
+            <div className="flex">
+              <p>Belum punya akun?{' '}</p>
+              <Link href="/register/warung">
+                <p className="ml-1 font-medium text-green-600 hover:text-green-700">
+                  Daftar
+                </p>
+              </Link>
+            </div>
+            <div className="mt-5 font-bold">
+              <h1 className="text-xl">War<span className="text-green-600">GO</span> &reg;</h1>
+              <p className="text-[10px] text-gray-600">All rights reserved.</p>
+            </div>
           </div>
         </div>
       </div>

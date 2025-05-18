@@ -29,9 +29,8 @@ export default function Register() {
             key={i}
             src={img}
             alt={`slider-${i}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              i === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
           />
         ))}
         <div className="absolute inset-0 bg-black opacity-50 z-20"></div>
@@ -45,7 +44,7 @@ export default function Register() {
 
       {/* Form register */}
       <div className="flex flex-1 items-center justify-center px-6 py-12 bg-white">
-        <BackToHomeButton/>
+        <BackToHomeButton />
         <div className="max-w-md w-full space-y-8">
           <h2 className="text-center text-3xl font-extrabold text-gray-900">Daftar Toko Anda</h2>
           <form className="mt-8 space-y-6" action="#" method="POST">
@@ -95,12 +94,20 @@ export default function Register() {
             </div>
           </form>
 
-          <p className="text-center text-sm text-gray-600">
-            Sudah punya akun?{' '}
-            <Link href="/login/warung" className="font-medium text-green-600 hover:text-green-500">
-              Masuk
-            </Link>
-          </p>
+          <div className="text-center text-sm text-gray-600 flex flex-col items-center justify-center">
+            <div className="flex">
+              <p>Belum punya akun?{' '}</p>
+              <Link href="/login/warung">
+                <p className="ml-1 font-medium text-green-600 hover:text-green-700">
+                  Daftar
+                </p>
+              </Link>
+            </div>
+            <div className="mt-5 font-bold">
+              <h1 className="text-xl">War<span className="text-green-600">GO</span> &reg;</h1>
+              <p className="text-[10px] text-gray-600">All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
