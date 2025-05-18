@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import BackToHomeButton from '../components/buttonBack';
+import BackToHomeButton from '@/app/components/buttonBack';
 
 const images = [
   'https://awsimages.detik.net.id/community/media/visual/2021/06/27/warung-pintar_169.jpeg?w=1200',
@@ -38,7 +38,7 @@ export default function Register() {
         <div className="absolute bottom-6 left-6 text-white z-20 max-w-xs">
           <h1 className="text-3xl font-bold mb-2">Bergabunglah dengan WarGo</h1>
           <p className="text-sm md:text-base">
-            Buka peluang usaha kuliner lebih luas bersama kami.
+            Buka peluang untuk UMKM dan dapatkan keuntungan banyak untuk warung anda.
           </p>
         </div>
       </div>
@@ -47,17 +47,17 @@ export default function Register() {
       <div className="flex flex-1 items-center justify-center px-6 py-12 bg-white">
         <BackToHomeButton/>
         <div className="max-w-md w-full space-y-8">
-          <h2 className="text-center text-3xl font-extrabold text-gray-900">Daftar Akun Baru</h2>
+          <h2 className="text-center text-3xl font-extrabold text-gray-900">Daftar Toko Anda</h2>
           <form className="mt-8 space-y-6" action="#" method="POST">
             <div className="space-y-4">
               <div>
-                <label htmlFor="name" className="sr-only">Nama Lengkap</label>
+                <label htmlFor="name" className="sr-only">Nama Toko / Warung</label>
                 <input
                   id="name"
                   name="name"
                   type="text"
                   required
-                  placeholder="Nama Lengkap"
+                  placeholder="Nama Toko / Warung"
                   className="w-full px-3 py-2 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm text-black"
                 />
               </div>
@@ -97,7 +97,7 @@ export default function Register() {
 
           <p className="text-center text-sm text-gray-600">
             Sudah punya akun?{' '}
-            <Link href="/login" className="font-medium text-green-600 hover:text-green-500">
+            <Link href="/login/warung" className="font-medium text-green-600 hover:text-green-500">
               Masuk
             </Link>
           </p>

@@ -196,13 +196,13 @@ export default function LandingPage() {
               <h3 className="text-sm font-bold text-gray-800 mb-4">Pilih Jenis Pengguna</h3>
               <div className="flex flex-col space-y-4">
                 <Link
-                  href="/login"
+                  href="/login/warung"
                   className="bg-green-600 text-white text-center py-2 rounded hover:bg-green-700 transition"
                 >
                   Saya Pemilik Warung / Toko
                 </Link>
                 <Link
-                  href="/login"
+                  href="/login/umkm"
                   className="bg-green-600 text-white text-center py-2 rounded hover:bg-green-700 transition"
                 >
                   Saya Pelaku UMKM

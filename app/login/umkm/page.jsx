@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import BackToHomeButton from '../components/buttonBack';
+import BackToHomeButton from '@/app/components/buttonBack';
 
 const images = [
   'https://awsimages.detik.net.id/community/media/visual/2021/06/27/warung-pintar_169.jpeg?w=1200',
@@ -87,7 +87,7 @@ export default function Login() {
 
           <div className="text-center text-sm text-gray-600 flex justify-center">
             <p>Belum punya akun?{' '}</p>
-            <Link href="/register">
+            <Link href="/register/umkm">
               <p className="ml-1 font-medium text-green-600 hover:text-green-700">
                 Daftar
               </p>
