@@ -2,21 +2,35 @@
 
 import SidebarLayout from "./components/sidebarLayouts";
 import SliderImage from "../components/slider";
+import { Search } from "lucide-react";
 
 export default function WarungPage() {
   return (
     <SidebarLayout>
       <SliderImage />
       <div className="p-4">
-        <h1 className="text-xl sm:text-2xl font-bold mb-4 text-center text-gray-800">
-          Cari Produk Untuk Jualan <span className="text-green-600">Disini.</span>
-        </h1>
+        <div className="relative inset-0 flex items-center justify-center z-20">
+          <div className="w-[95%] sm:w-[70%] md:w-[50%]">
+            <div className="flex items-center bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+              <button className="px-3 py-2 text-green-600"><Search /></button>
+              <input
+                type="search"
+                placeholder="Cari disini..."
+                className="w-full px-2 py-2 text-sm text-black focus:outline-none"
+              />
+              <button className="bg-green-600 text-white px-4 py-3 text-sm hover:bg-green-700 transition-all duration-300">
+                Cari
+              </button>
+            </div>
+          </div>
+        </div>
+        {/** */}
         {/* Filter */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center max-w-3xl mx-auto">
+        <div className="flex flex-wrap gap-4 items-end justify-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto mt-4">
           {/* Kota */}
-          <div>
-            <label className="block mb-1 font-medium text-sm text-gray-700">Kota</label>
-            <select className="w-full p-2 border border-gray-200 rounded text-black">
+          <div className="flex flex-col">
+            <label className="text-xs font-medium text-gray-600 mb-1">Kota</label>
+            <select className="px-2 py-1 text-sm border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring focus:ring-green-500">
               <option>Semua</option>
               <option>Cimahi</option>
               <option>Bandung</option>
@@ -25,9 +39,9 @@ export default function WarungPage() {
           </div>
 
           {/* Jenis Produk */}
-          <div>
-            <label className="block mb-1 font-medium text-sm text-gray-700">Jenis Produk</label>
-            <select className="w-full p-2 border border-gray-200 rounded text-black">
+          <div className="flex flex-col">
+            <label className="text-xs font-medium text-gray-600 mb-1">Jenis Produk</label>
+            <select className="px-2 py-1 text-sm border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring focus:ring-green-500">
               <option>Semua</option>
               <option>Makanan Snack</option>
               <option>Makanan Berat</option>
@@ -37,15 +51,16 @@ export default function WarungPage() {
           </div>
 
           {/* Status */}
-          <div>
-            <label className="block mb-1 font-medium text-sm text-gray-700">Status</label>
-            <select className="w-full p-2 border border-gray-200 rounded text-black">
+          <div className="flex flex-col">
+            <label className="text-xs font-medium text-gray-600 mb-1">Status</label>
+            <select className="px-2 py-1 text-sm border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring focus:ring-green-500">
               <option>Semua</option>
               <option>Buka</option>
               <option>Tutup</option>
             </select>
           </div>
         </div>
+
       </div>
     </SidebarLayout>
   );
