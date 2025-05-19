@@ -24,7 +24,7 @@ export default function SliderImage() {
                 modules={[Autoplay, Pagination]}
                 autoplay={{ delay: 2500 }}
                 loop
-                className="h-[26vh] sm:h-[35vh] md:h-[35vh]"
+                className="h-[23vh] sm:h-[35vh] md:h-[35vh]"
             >
                 {images.map((data, idx) => (
                     <SwiperSlide key={idx}>

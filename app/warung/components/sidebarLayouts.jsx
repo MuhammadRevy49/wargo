@@ -34,7 +34,7 @@ export default function SidebarLayout({ children }) {
       {/* Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 sm:hidden"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-33 sm:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -42,7 +42,7 @@ export default function SidebarLayout({ children }) {
       {/* Main content */}
       <div className="flex-1 overflow-auto w-full">
         {/* Topbar for mobile */}
-        <div className="sm:hidden flex items-center justify-between p-4 bg-transparent fixed z-33 w-full">
+        <div className="sm:hidden flex items-center justify-between p-4 bg-transparent fixed z-31 w-full">
           <h1 className="text-lg font-bold text-white">War<span className="text-green-600">Go</span></h1>
           <button className="bg-green-600 rounded p-1" onClick={() => setSidebarOpen(true)}>
             <Menu className="text-white" />
