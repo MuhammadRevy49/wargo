@@ -103,6 +103,7 @@ export default function WarungPage() {
                 items={options.kota}
                 activeDropdown={activeDropdown}
                 setActiveDropdown={setActiveDropdown}
+                className="text-black"
               />
             </div>
             <div className="flex-1 min-w-[140px]">
@@ -114,6 +115,7 @@ export default function WarungPage() {
                 items={options.jenis}
                 activeDropdown={activeDropdown}
                 setActiveDropdown={setActiveDropdown}
+                className="text-black"
               />
             </div>
           </div>
@@ -129,7 +131,7 @@ export default function WarungPage() {
                 className="w-full h-40 object-cover"
               />
               <div className="p-4 flex flex-col flex-grow">
-                <h2 className="md:text-lg text-sm font-semibold mb-1">{warung.nama}</h2>
+                <h2 className="md:text-lg text-sm font-semibold text-gray-800 mb-1">{warung.nama}</h2>
                 <p className="text-[12px] md:text-sm text-gray-600 mb-4">{warung.alamat}</p>
                 <a
                   href={warung.kontak}
