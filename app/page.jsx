@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Store, Send, PackageCheck, Menu, X } from 'lucide-react';
+import { Store, Send, PackageCheck, Menu, X, LayoutDashboard, Notebook } from 'lucide-react';
 import Link from 'next/link';
 
 const images = [
@@ -38,7 +38,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white text-gray-800 relative overflow-hidden">
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4 z-33 transition-all ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-        <h1 className={`text-xl font-bold ${scrolled ? 'text-green-600' : 'text-white'}`}>WarGo</h1>
+        <h1 className={`text-xl font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>War<span className="text-green-600">Go</span></h1>
 
         {/* Desktop menu */}
         <div className="hidden sm:flex space-x-4">
@@ -141,9 +141,9 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Fitur */}
+      {/* Keuntungan UMKM */}
       <section id="fitur" className="px-6 py-20 bg-white relative z-10">
-        <h3 className="text-center text-2xl font-bold mb-10 text-green-700">Fitur Unggulan</h3>
+        <h3 className="text-center text-2xl font-bold mb-10 text-green-600"><span className="text-gray-800">Keuntungan</span> UMKM</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <FeatureCard
             icon={<Store className="w-8 h-8 text-green-600" />}
@@ -159,6 +159,28 @@ export default function LandingPage() {
             icon={<PackageCheck className="w-8 h-8 text-green-600" />}
             title="Pantau Pesanan"
             desc="Lacak pengiriman dan status penawaran dengan mudah."
+          />
+        </div>
+      </section>
+
+      {/* Keuntungan Warung */}
+      <section id="fitur" className="px-6 py-20 bg-gray-100 relative z-10">
+        <h3 className="text-center text-2xl font-bold mb-10 text-green-600"><span className="text-gray-800">Keuntungan</span> Warung</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <FeatureCard
+            icon={<LayoutDashboard className="w-8 h-8 text-green-600" />}
+            title="Kelola Warung"
+            desc="Menampilkan permintaan dan pengajuan di warung / toko anda ."
+          />
+          <FeatureCard
+            icon={<Send className="w-8 h-8 text-green-600" />}
+            title="Kirim Penawaran"
+            desc="Ajukan permintaan produk ke UMKM dari dashboard warung / toko Anda."
+          />
+          <FeatureCard
+            icon={<Notebook className="w-8 h-8 text-green-600" />}
+            title="Catatan Produk"
+            desc="Lihat daftar produk UMKM yang dititipkan di warung / toko anda."
           />
         </div>
       </section>
