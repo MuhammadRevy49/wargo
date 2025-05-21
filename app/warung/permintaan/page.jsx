@@ -21,7 +21,7 @@ export default function WarungDashboard() {
                         <div className="bg-white shadow-md rounded-xl p-4 flex items-center gap-4">
                             <Boxes className="w-8 h-8 text-green-600" />
                             <div>
-                                <p className="text-sm text-gray-500">Total Titipan Produk</p>
+                                <p className="text-sm text-gray-500">Total Permintaan</p>
                                 <p className="font-bold text-lg text-gray-800">{products.length}</p>
                             </div>
                         </div>

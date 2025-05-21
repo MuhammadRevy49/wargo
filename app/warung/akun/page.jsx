@@ -6,7 +6,7 @@ import SidebarLayout from '../components/sidebarLayouts';
 export default function AkunPage() {
   return (
     <SidebarLayout>
-      <div className="w-full h-full p-4 sm:p-6 overflow-y-auto">
+      <div className="w-full h-full p-4 sm:p-6 overflow-y-auto pt-16">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-2xl font-bold mb-6 text-green-700 text-center"><span className="text-gray-800">Profil</span> Akun</h1>
 
