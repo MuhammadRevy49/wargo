@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Menu, X, Search, LayoutDashboard, ClipboardList, User } from "lucide-react";
+import { Menu, X, Search, ArrowDownLeft, ArrowUpRight, ClipboardList, User } from "lucide-react";
 import Link from "next/link";
 
 export default function SidebarLayout({ children }) {
@@ -25,8 +25,8 @@ export default function SidebarLayout({ children }) {
         </div>
         <div className="space-y-4 mt-4">
           <Link href="/warung" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><Search className="mr-2"/>Cari Produk</Link>
-          <Link href="/warung/permintaan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><LayoutDashboard className="mr-2"/>Permintaan</Link>
-          <Link href="/warung/pengajuan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><LayoutDashboard className="mr-2"/>Pengajuan</Link>
+          <Link href="/warung/permintaan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ArrowDownLeft className="mr-2"/>Permintaan</Link>
+          <Link href="/warung/pengajuan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ArrowUpRight className="mr-2"/>Pengajuan</Link>
           <Link href="/warung/titipan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ClipboardList className="mr-2"/>Titipan</Link>
           <Link href="/warung/akun" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><User className="mr-2"/>Akun</Link>
         </div>

@@ -5,9 +5,9 @@ import 'swiper/css/pagination';
 
 export default function SliderImage() {
     const images = [
-        'https://awsimages.detik.net.id/community/media/visual/2021/06/27/warung-pintar_169.jpeg?w=1200',
-        'https://cobisnis.com/wp-content/uploads/2021/11/images-6-1.jpeg',
-        'https://www.bee.id/wp-content/uploads/2020/04/Bisnis-Lebih-Mudah-Gunakan-Aplikasi-Warung-ini.jpg',
+        '/images/glow.png',
+        '/images/gambar2.png',
+        '/images/glow.png',
     ];
 
     return (
@@ -37,7 +37,7 @@ export default function SliderImage() {
                             />
 
                             {/* Gradient Overlay only on mobile */}
-                            <div className="absolute inset-0 sm:hidden bg-gradient-to-b from-black/80 via-black/33 to-transparent z-10" />
+                            
                         </div>
                     </SwiperSlide>
                 ))}
