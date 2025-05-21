@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Menu, X, Home, LayoutDashboard, ClipboardList, User } from "lucide-react";
+import { Menu, X, Search, LayoutDashboard, ClipboardList, User } from "lucide-react";
 import Link from "next/link";
 
 export default function SidebarLayout({ children }) {
@@ -24,8 +24,9 @@ export default function SidebarLayout({ children }) {
           <h1 className="font-bold text-2xl text-gray-800">War<span className="text-green-600">GO</span></h1>
         </div>
         <div className="space-y-4 mt-4">
-          <Link href="/warung" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><Home className="mr-2"/>Beranda</Link>
-          <Link href="/warung/dashboard" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><LayoutDashboard className="mr-2"/>Dashboard</Link>
+          <Link href="/warung" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><Search className="mr-2"/>Cari Produk</Link>
+          <Link href="/warung/permintaan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><LayoutDashboard className="mr-2"/>Permintaan</Link>
+          <Link href="/warung/pengajuan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><LayoutDashboard className="mr-2"/>Pengajuan</Link>
           <Link href="/warung/titipan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ClipboardList className="mr-2"/>Titipan</Link>
           <Link href="/warung/akun" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><User className="mr-2"/>Akun</Link>
         </div>
@@ -43,7 +44,7 @@ export default function SidebarLayout({ children }) {
       <div className="flex-1 overflow-auto w-full">
         {/* Topbar for mobile */}
         <div className="sm:hidden flex items-center justify-between p-4 bg-transparent fixed z-31 w-full">
-          <h1 className="text-lg font-bold text-white">War<span className="text-green-600">Go</span></h1>
+          <h1 className="text-lg font-bold text-gray-800 bg-white rounded-full px-2">War<span className="text-green-600">Go</span></h1>
           <button className="bg-green-600 rounded p-1" onClick={() => setSidebarOpen(true)}>
             <Menu className="text-white" />
           </button>

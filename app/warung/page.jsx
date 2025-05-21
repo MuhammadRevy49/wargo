@@ -51,21 +51,21 @@ export default function WarungPage() {
   // Dummy data
   const warungs = [
     {
-      nama: "Warung Bu Eros",
+      nama: "Keripik Basreng",
       alamat: "Jl. K.H. Usman Dhomiri",
-      gambar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJwEmBda1MN-yH75AJmgLjfpAwDLfqJWXMw&s",
+      gambar: "https://down-id.img.susercontent.com/file/37376d9518e20493a7677e3fb432c26b",
       kontak: "#"
     },
     {
-      nama: "Warung Mas Budi",
+      nama: "Kerupuk Jengkol",
       alamat: "Jl. Merdeka No. 10",
-      gambar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPA1ErME7moT9zNsezUmL0I2Ru_AelJo759g&s",
+      gambar: "https://homemadeindonesia.com/apihmi/images/datatoko/K29384DE132_brg13613.jpg",
       kontak: "#"
     },
     {
-      nama: "Warung Teh Ina",
+      nama: "Roti Sisir",
       alamat: "Jl. Sukabumi",
-      gambar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmYV1lly7SbHvLYJDdZ_U7-S96EU5DdhUm8w&s",
+      gambar: "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/17/16dac5c7-2afd-4342-9666-4932e0d732af.jpg",
       kontak: "#"
     }
   ];
@@ -73,7 +73,7 @@ export default function WarungPage() {
   return (
     <SidebarLayout>
       <SliderImage />
-      <div className="p-4">
+      <div className="p-4 bg-gray-50">
         {/* Search */}
         <div className="relative inset-0 flex items-center justify-center z-20">
           <div className="w-[95%] sm:w-[70%] md:w-[50%]">
@@ -122,7 +122,7 @@ export default function WarungPage() {
         </div>
 
         {/* Cards */}
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           {warungs.map((warung, index) => (
             <div key={index} className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
               <img
@@ -137,7 +137,7 @@ export default function WarungPage() {
                   href={warung.kontak}
                   className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center"
                 >
-                  Hubungi
+                  + Saya Mau Produk Ini
                 </a>
               </div>
             </div>
