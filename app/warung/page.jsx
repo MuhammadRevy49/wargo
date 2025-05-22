@@ -10,7 +10,7 @@ const options = {
   jenis: ["Semua", "Makanan Snack", "Makanan Berat", "Minuman Kemasan", "Minuman Fresh"]
 };
 
-function Dropdown({ label, selected, setSelected, items, activeDropdown, setActiveDropdown }) {
+function Dropdown({ label, selected, setSelected, items, activeDropdown, setActiveDropdown, className }) {
   const isOpen = activeDropdown === label;
 
   return (
@@ -20,10 +20,10 @@ function Dropdown({ label, selected, setSelected, items, activeDropdown, setActi
         className="w-full flex justify-between items-center px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-700 hover:border-green-500"
       >
         {selected}
-        <ChevronDown className="w-4 h-4 ml-2 text-gray-500" />
+        <ChevronDown className="w-4 h-4 ml-2 text-gray-800" />
       </button>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-md">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 text-gray-800 rounded-md shadow-md">
           {items.map((item, index) => (
             <button
               key={index}
@@ -95,7 +95,7 @@ export default function WarungPage() {
         <div className="w-full flex justify-center pt-4 px-4">
           <div className="w-full max-w-4xl flex gap-4 flex-wrap sm:flex-nowrap">
             <div className="flex-1 min-w-[140px]">
-              <p className="text-sm font-medium mb-1 text-gray-700">Cari Kota</p>
+              <p className="text-sm font-medium mb-1 text-gray-800">Cari Kota</p>
               <Dropdown
                 label="Kota"
                 selected={kota}
@@ -103,11 +103,10 @@ export default function WarungPage() {
                 items={options.kota}
                 activeDropdown={activeDropdown}
                 setActiveDropdown={setActiveDropdown}
-                className="text-black"
               />
             </div>
             <div className="flex-1 min-w-[140px]">
-              <p className="text-sm font-medium mb-1 text-gray-700">Cari Jenis</p>
+              <p className="text-sm font-medium mb-1 text-gray-800">Cari Jenis</p>
               <Dropdown
                 label="Jenis Produk"
                 selected={jenis}
@@ -115,7 +114,6 @@ export default function WarungPage() {
                 items={options.jenis}
                 activeDropdown={activeDropdown}
                 setActiveDropdown={setActiveDropdown}
-                className="text-black"
               />
             </div>
           </div>

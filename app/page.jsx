@@ -38,12 +38,12 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white text-gray-800 relative overflow-hidden">
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4 z-33 transition-all ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-        <h1 className={`text-xl font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>War<span className="text-green-600">Go</span></h1>
+        <a href="/" className={`text-xl font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>War<span className="text-green-600">Go</span></a>
 
         {/* Desktop menu */}
         <div className="hidden sm:flex space-x-4">
           <a href="#tentang" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Tentang</a>
-          <a href="#fitur" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Fitur</a>
+          <a href="#Keuntungan" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Keuntungan</a>
           <button
             onClick={() => setShowModal(true)}
             className="bg-green-600 font-bold text-white hover:bg-green-700 rounded py-1 px-2 transition-all drop-shadow-md"
@@ -76,7 +76,7 @@ export default function LandingPage() {
         </div>
         <nav className="flex flex-col space-y-4 ">
           <a href="#tentang" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Tentang</a>
-          <a href="#fitur" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Fitur</a>
+          <a href="#Keuntungan" className="text-gray-800 font-medium" onClick={() => setSidebarOpen(false)}>Keuntungan</a>
           <button
             onClick={() => {
               setSidebarOpen(false);
@@ -134,15 +134,15 @@ export default function LandingPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.4 }}
           >
-            <button className="bg-green-600 bg-opacity-90 text-white px-6 py-2 hover:bg-green-700 rounded drop-shadow-md transition-all">
+            <a href="#Keuntungan" className="bg-green-600 bg-opacity-90 text-white px-6 py-2 hover:bg-green-700 rounded drop-shadow-md transition-all">
               Mulai Sekarang
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
 
       {/* Keuntungan UMKM */}
-      <section id="fitur" className="px-6 py-20 bg-white relative z-10">
+      <section id="Keuntungan" className="px-6 py-20 bg-white relative z-10">
         <h3 className="text-center text-2xl font-bold mb-10 text-green-600"><span className="text-gray-800">Keuntungan</span> UMKM</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <FeatureCard
@@ -164,7 +164,7 @@ export default function LandingPage() {
       </section>
 
       {/* Keuntungan Warung */}
-      <section id="fitur" className="px-6 py-20 bg-gray-100 relative z-10">
+      <section id="Keuntungan" className="px-6 py-20 bg-gray-100 relative z-10">
         <h3 className="text-center text-2xl font-bold mb-10 text-green-600"><span className="text-gray-800">Keuntungan</span> Warung</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <FeatureCard
