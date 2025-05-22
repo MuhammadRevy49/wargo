@@ -44,7 +44,7 @@ export default function SidebarLayout({ children }) {
       <div className="flex-1 overflow-auto w-full">
         {/* Topbar for mobile */}
         <div className="sm:hidden flex items-center justify-between p-4 bg-transparent fixed z-31 w-full">
-          <h1 className="text-lg font-bold text-gray-800 bg-white rounded-full px-2">War<span className="text-green-600">Go</span></h1>
+          <h1 className="text-lg font-bold text-gray-800 bg-white shadow rounded-full px-2">War<span className="text-green-600">Go</span></h1>
           <button className="bg-white rounded shadow-md p-1" onClick={() => setSidebarOpen(true)}>
             <Menu className="text-green-600" />
           </button>

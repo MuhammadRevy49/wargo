@@ -5,9 +5,8 @@ import 'swiper/css/pagination';
 
 export default function SliderImage() {
     const images = [
-        '/images/hp.png',
-        '/images/patahgambar2.png',
-        '/images/patahgambar2.png',
+        '/images/putih3.png',
+        '/images/putih6.png',
     ];
 
     return (
