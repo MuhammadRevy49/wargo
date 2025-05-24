@@ -1,26 +1,45 @@
 'use client'
 
-import { Boxes, PackageCheck, User } from 'lucide-react';
+import { Boxes, User } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import SidebarUmkm from '../components/sidebarUmkm';
 
 export default function ProdukUmkm() {
-    const [modal, setModal] = useState(false);
-    const [showModal, setShowModal] = useState(false); // untuk animasi
-
     const [products, setProducts] = useState([
         { id: 1, name: 'Keripik Cireng', sender: 'Varian rasa gurih, balado, pedas' },
         { id: 2, name: 'Keripik Basreng', sender: 'Varian rasa gurih, balado, pedas' },
         { id: 3, name: 'Keripik Tahu', sender: 'Varian rasa gurih, balado, pedas' },
     ]);
 
+    const [modalTambah, setModalTambah] = useState(false);
+    const [modalEdit, setModalEdit] = useState(false);
+    const [showModal, setShowModal] = useState(false); // animasi
+    const [editingProduct, setEditingProduct] = useState(null);
+
     useEffect(() => {
-        if (modal) {
+        if (modalTambah || modalEdit) {
             setTimeout(() => setShowModal(true), 10);
         } else {
             setShowModal(false);
         }
-    }, [modal]);
+    }, [modalTambah, modalEdit]);
+
+    const openEditModal = (product) => {
+        setEditingProduct(product);
+        setModalEdit(true);
+    };
+
+    const handleUpdateProduct = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const updated = {
+            ...editingProduct,
+            name: form.name.value,
+            sender: form.sender.value,
+        };
+        setProducts(products.map((p) => (p.id === updated.id ? updated : p)));
+        setModalEdit(false);
+    };
 
     return (
         <SidebarUmkm>
@@ -30,7 +49,7 @@ export default function ProdukUmkm() {
                         <span className="text-gray-800">Produk</span> Anda
                     </h1>
                     <button
-                        onClick={() => setModal(true)}
+                        onClick={() => setModalTambah(true)}
                         className="p-2 bg-green-600 mb-3 rounded text-white hover:bg-green-700 transition-all"
                     >
                         + Tambah Produk
@@ -59,8 +78,20 @@ export default function ProdukUmkm() {
                                         <p className="text-gray-500">Desk: {product.sender}</p>
                                     </div>
                                     <div className="flex flex-row">
-                                        <button className="p-1 bg-green-500 text-white rounded m-1">Ubah</button>
-                                        <button className="p-1 bg-red-500 text-white rounded m-1">Hapus</button>
+                                        <button
+                                            onClick={() => openEditModal(product)}
+                                            className="p-1 bg-green-500 text-white rounded m-1"
+                                        >
+                                            Ubah
+                                        </button>
+                                        <button
+                                            onClick={() =>
+                                                setProducts(products.filter((p) => p.id !== product.id))
+                                            }
+                                            className="p-1 bg-red-500 text-white rounded m-1"
+                                        >
+                                            Hapus
+                                        </button>
                                     </div>
                                 </div>
                             ))}
@@ -73,8 +104,8 @@ export default function ProdukUmkm() {
                 </div>
             </div>
 
-            {/* MODAL */}
-            {modal && (
+            {/* MODAL TAMBAH */}
+            {modalTambah && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/30 transition-opacity duration-300">
                     <div
                         className={`bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative transform transition-all duration-300 ${
@@ -82,7 +113,7 @@ export default function ProdukUmkm() {
                         }`}
                     >
                         <button
-                            onClick={() => setModal(false)}
+                            onClick={() => setModalTambah(false)}
                             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-lg"
                         >
                             ✕
@@ -98,7 +129,7 @@ export default function ProdukUmkm() {
                                     sender: form.sender.value,
                                 };
                                 setProducts([...products, newProduct]);
-                                setModal(false);
+                                setModalTambah(false);
                             }}
                         >
                             <div className="mb-4">
@@ -106,7 +137,7 @@ export default function ProdukUmkm() {
                                 <input
                                     name="name"
                                     required
-                                    className="w-full mt-1 p-2 border border-gray-300 rounded"
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
                                     placeholder="Contoh: Keripik Pisang"
                                 />
                             </div>
@@ -115,19 +146,23 @@ export default function ProdukUmkm() {
                                 <textarea
                                     name="sender"
                                     required
-                                    className="w-full mt-1 p-2 border border-gray-300 rounded"
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
                                     placeholder="Deskripsi produk..."
                                 />
                             </div>
                             <div className="mb-4">
                                 <label className="block text-sm font-medium text-gray-700">Foto Produk</label>
-                                <input type="file" className="w-full hover:cursor-pointer text-gray-800 border border-gray-300 p-2 rounded"/>
+                                <input
+                                    type="file"
+                                    name="foto"
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 hover:cursor-pointer rounded"
+                                />
                             </div>
                             <div className="flex justify-end gap-2">
                                 <button
                                     type="button"
-                                    onClick={() => setModal(false)}
-                                    className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 text-sm"
+                                    onClick={() => setModalTambah(false)}
+                                    className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 text-gray-800 text-sm"
                                 >
                                     Batal
                                 </button>
@@ -136,6 +171,68 @@ export default function ProdukUmkm() {
                                     className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 text-sm"
                                 >
                                     Simpan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+            {/* MODAL EDIT */}
+            {modalEdit && editingProduct && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/30 transition-opacity duration-300">
+                    <div
+                        className={`bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative transform transition-all duration-300 ${
+                            showModal ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                        }`}
+                    >
+                        <button
+                            onClick={() => setModalEdit(false)}
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-lg"
+                        >
+                            ✕
+                        </button>
+                        <h2 className="text-xl font-bold mb-4 text-gray-800">Edit Produk</h2>
+                        <form onSubmit={handleUpdateProduct}>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Nama Produk</label>
+                                <input
+                                    name="name"
+                                    defaultValue={editingProduct.name}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                />
+                            </div>
+                            <div className="mb-2">
+                                <label className="block text-sm font-medium text-gray-700">Deskripsi</label>
+                                <textarea
+                                    name="sender"
+                                    defaultValue={editingProduct.sender}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Foto Produk</label>
+                                <input
+                                    type="file"
+                                    name="foto"
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 hover:cursor-pointer rounded"
+                                />
+                            </div>
+                            <div className="flex justify-end gap-2">
+                                <button
+                                    type="button"
+                                    onClick={() => setModalEdit(false)}
+                                    className="px-4 py-2 text-gray-800 bg-gray-300 rounded hover:bg-gray-400 text-sm"
+                                >
+                                    Batal
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 text-sm"
+                                >
+                                    Simpan Perubahan
                                 </button>
                             </div>
                         </form>

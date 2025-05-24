@@ -6,9 +6,9 @@ import SidebarUmkm from '../components/sidebarUmkm';
 
 export default function WarungDashboard() {
     const [products, setProducts] = useState([
-        { id: 1, name: 'Keripik Pisang', sender: 'UMKM Maju Jaya', status: 'Menunggu' },
-        { id: 2, name: 'Sambal Roa', sender: 'UMKM Pedas Nikmat', status: 'Diterima' },
-        { id: 3, name: 'Brownies Kukus', sender: 'UMKM ChocoLove', status: 'Menunggu' },
+        { id: 1, name: 'Warung Babeh', sender: 'Jl. Pakuhaji', status: 'Menunggu' },
+        { id: 2, name: 'Kantin SMP 3', sender: 'Desa Tanimulya', status: 'Diterima' },
+        { id: 3, name: 'Warung Bu Ani', sender: 'Cimahi Tengah', status: 'Menunggu' },
     ]);
 
     return (

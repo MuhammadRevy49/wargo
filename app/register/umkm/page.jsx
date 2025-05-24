@@ -85,21 +85,21 @@ export default function Register() {
             </div>
 
             <div>
-              <button
-                type="submit"
-                className="w-full py-2 px-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+              <a
+                href="/login/umkm"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 Daftar
-              </button>
+              </a>
             </div>
           </form>
 
           <div className="text-center text-sm text-gray-600 flex flex-col items-center justify-center">
             <div className="flex">
-              <p>Belum punya akun?{' '}</p>
+              <p>Sudah punya akun?{' '}</p>
               <Link href="/login/umkm">
                 <p className="ml-1 font-medium text-green-600 hover:text-green-700">
-                  Daftar
+                  Masuk
                 </p>
               </Link>
             </div>
