@@ -15,7 +15,7 @@ export default function WarungDashboard() {
         <SidebarLayout>
             <div className="min-h-screen bg-gray-50 p-4 sm:p-6 pt-16">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl font-bold mb-6 text-green-700 text-center"><span className="text-gray-800">Pengajuan</span> Anda</h1>
+                    <p className="text-xl mb-6 text-green-600 text-center"><span className="text-gray-800">Pengajuan</span> Anda</p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div className="bg-white shadow-md rounded-xl p-4 flex items-center gap-4">
@@ -35,7 +35,7 @@ export default function WarungDashboard() {
                     </div>
 
                     <div className="bg-white shadow-md rounded-xl overflow-hidden">
-                        <div className="bg-green-600 text-white px-4 py-2 font-semibold">Pengajuan Anda</div>
+                        <div className="bg-green-600 text-white px-4 py-2">Pengajuan Anda</div>
                         <div className="divide-y">
                             {products.map((product) => (
                                 <div

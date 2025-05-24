@@ -34,7 +34,7 @@ export default function AkunPage() {
                   type="email"
                   placeholder="Email"
                   className="w-full bg-transparent outline-none text-gray-700"
-                  defaultValue="warungabc@example.com"
+                  defaultValue="kribi@gmail.com"
                 />
               </div>
             </div>
@@ -53,9 +53,9 @@ export default function AkunPage() {
             </div>
 
             {/* Simpan Button */}
-            <div className="text-center">
+            <div className="text-center flex flex-row justify-center">
               <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all">
-                Simpan Perubahan
+                Simpan
               </button>
               <a href="/" className="ml-3 py-3 px-5 bg-red-500 rounded-lg text-white">Logout</a>
             </div>

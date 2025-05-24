@@ -6,9 +6,9 @@ import SidebarUmkm from '../components/sidebarUmkm';
 
 export default function ProdukUmkm() {
     const [products, setProducts] = useState([
-        { id: 1, name: 'Keripik Cireng', sender: 'Varian rasa gurih, balado, pedas' },
-        { id: 2, name: 'Keripik Basreng', sender: 'Varian rasa gurih, balado, pedas' },
-        { id: 3, name: 'Keripik Tahu', sender: 'Varian rasa gurih, balado, pedas' },
+        { id: 1, name: 'Keripik Cireng', sender: 'Varian rasa gurih, balado, pedas', jenis: 'Keripik', harga: 15000, untung: 5000 },
+        { id: 2, name: 'Keripik Basreng', sender: 'Varian rasa gurih, balado, pedas', jenis: 'Keripik', harga: 15000, untung: 5000 },
+        { id: 3, name: 'Keripik Tahu', sender: 'Varian rasa gurih, balado, pedas', jenis: 'Keripik', harga: 15000, untung: 5000 },
     ]);
 
     const [modalTambah, setModalTambah] = useState(false);
@@ -36,6 +36,9 @@ export default function ProdukUmkm() {
             ...editingProduct,
             name: form.name.value,
             sender: form.sender.value,
+            jenis: form.jenis.value,
+            harga: Number(form.harga.value),
+            untung: Number(form.untung.value),
         };
         setProducts(products.map((p) => (p.id === updated.id ? updated : p)));
         setModalEdit(false);
@@ -45,12 +48,12 @@ export default function ProdukUmkm() {
         <SidebarUmkm>
             <div className="min-h-screen bg-gray-50 p-4 sm:p-6 pt-16">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-2xl font-bold mb-6 text-green-700 text-center">
+                    <h1 className="text-xl mb-6 text-green-700 text-center">
                         <span className="text-gray-800">Produk</span> Anda
                     </h1>
                     <button
                         onClick={() => setModalTambah(true)}
-                        className="p-2 bg-green-600 mb-3 rounded text-white hover:bg-green-700 transition-all"
+                        className="py-1 px-2 bg-green-600 mb-3 rounded text-white hover:bg-green-700 transition-all"
                     >
                         + Tambah Produk
                     </button>
@@ -66,7 +69,7 @@ export default function ProdukUmkm() {
                     </div>
 
                     <div className="bg-white shadow-md rounded-xl overflow-hidden mb-5">
-                        <div className="bg-green-600 text-white px-4 py-2 font-semibold">Permintaan Minat Produk Anda</div>
+                        <div className="bg-green-600 text-white px-4 py-2">Daftar Produk Anda</div>
                         <div className="divide-y">
                             {products.map((product) => (
                                 <div
@@ -75,12 +78,12 @@ export default function ProdukUmkm() {
                                 >
                                     <div>
                                         <p className="font-semibold text-gray-800">{product.name}</p>
-                                        <p className="text-gray-500">Desk: {product.sender}</p>
+                                        <p className="text-gray-500">Harga: {product.harga}</p>
                                     </div>
                                     <div className="flex flex-row">
                                         <button
                                             onClick={() => openEditModal(product)}
-                                            className="p-1 bg-green-500 text-white rounded m-1"
+                                            className="p-1 bg-green-500 text-white rounded m-1 hover:cursor-pointer hover:bg-green-700 transition-all"
                                         >
                                             Ubah
                                         </button>
@@ -88,7 +91,7 @@ export default function ProdukUmkm() {
                                             onClick={() =>
                                                 setProducts(products.filter((p) => p.id !== product.id))
                                             }
-                                            className="p-1 bg-red-500 text-white rounded m-1"
+                                            className="p-1 bg-red-500 text-white rounded m-1 hover:cursor-pointer hover:bg-red-700 transition-all"
                                         >
                                             Hapus
                                         </button>
@@ -99,7 +102,7 @@ export default function ProdukUmkm() {
                     </div>
 
                     <div className="text-center mt-6 text-gray-500 text-sm">
-                        <User className="inline w-4 h-4 mr-1" /> WarGo Warung Panel
+                        <User className="inline w-4 h-4 mr-1" /> Kribi
                     </div>
                 </div>
             </div>
@@ -127,6 +130,9 @@ export default function ProdukUmkm() {
                                     id: products.length + 1,
                                     name: form.name.value,
                                     sender: form.sender.value,
+                                    jenis: form.jenis.value,
+                                    harga: Number(form.harga.value),
+                                    untung: Number(form.untung.value),
                                 };
                                 setProducts([...products, newProduct]);
                                 setModalTambah(false);
@@ -139,6 +145,37 @@ export default function ProdukUmkm() {
                                     required
                                     className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
                                     placeholder="Contoh: Keripik Pisang"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Jenis Produk</label>
+                                <input
+                                    name="jenis"
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                    placeholder="Contoh: Keripik"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Harga Jual (Rp)</label>
+                                <input
+                                    name="harga"
+                                    type="number"
+                                    min={0}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                    placeholder="Contoh: 15000"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Untung Warung (Rp)</label>
+                                <input
+                                    name="untung"
+                                    type="number"
+                                    min={0}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                    placeholder="Contoh: 5000"
                                 />
                             </div>
                             <div className="mb-2">
@@ -199,6 +236,37 @@ export default function ProdukUmkm() {
                                 <input
                                     name="name"
                                     defaultValue={editingProduct.name}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Jenis Produk</label>
+                                <input
+                                    name="jenis"
+                                    defaultValue={editingProduct.jenis}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Harga Jual (Rp)</label>
+                                <input
+                                    name="harga"
+                                    type="number"
+                                    min={0}
+                                    defaultValue={editingProduct.harga}
+                                    required
+                                    className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label className="block text-sm font-medium text-gray-700">Untung Warung (Rp)</label>
+                                <input
+                                    name="untung"
+                                    type="number"
+                                    min={0}
+                                    defaultValue={editingProduct.untung}
                                     required
                                     className="w-full mt-1 p-2 border border-gray-300 text-gray-800 rounded"
                                 />

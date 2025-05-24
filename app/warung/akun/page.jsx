@@ -8,7 +8,7 @@ export default function AkunPage() {
     <SidebarLayout>
       <div className="w-full h-full p-4 sm:p-6 overflow-y-auto pt-16">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold mb-6 text-green-700 text-center"><span className="text-gray-800">Profil</span> Akun</h1>
+          <h1 className="text-2xl mb-6 text-green-700 text-center"><span className="text-gray-800">Profil</span> Akun</h1>
 
           <div className="bg-white shadow-md rounded-xl p-6 space-y-4">
             {/* Nama */}
@@ -53,11 +53,11 @@ export default function AkunPage() {
             </div>
 
             {/* Simpan Button */}
-            <div className="text-center">
-              <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all">
-                Simpan Perubahan
+            <div className="text-center flex flex-row justify-center">
+              <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 hover:cursor-pointer transition-all">
+                Simpan
               </button>
-              <a href="/" className="ml-3 py-3 px-5 bg-red-500 rounded-lg text-white">Logout</a>
+              <a href="/" className="ml-3 py-3 px-5 bg-red-500 rounded-lg text-white hover:cursor-pointer hover:bg-red-700 transition-all">Logout</a>
             </div>
           </div>
 

@@ -53,18 +53,21 @@ export default function WarungPage() {
     {
       nama: "Keripik Basreng",
       alamat: "Jl. K.H. Usman Dhomiri",
+      jenis: "Makanan Snack",
       gambar: "https://down-id.img.susercontent.com/file/37376d9518e20493a7677e3fb432c26b",
       kontak: "#"
     },
     {
       nama: "Kerupuk Jengkol",
       alamat: "Jl. Merdeka No. 10",
+      jenis: "Makanan Snack",
       gambar: "https://homemadeindonesia.com/apihmi/images/datatoko/K29384DE132_brg13613.jpg",
       kontak: "#"
     },
     {
       nama: "Roti Sisir",
       alamat: "Jl. Sukabumi",
+      jenis: "Makanan Kue",
       gambar: "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/17/16dac5c7-2afd-4342-9666-4932e0d732af.jpg",
       kontak: "#"
     }
@@ -120,9 +123,12 @@ export default function WarungPage() {
         </div>
 
         {/* Cards */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
           {warungs.map((warung, index) => (
             <div key={index} className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+              <div className="bg-green-500">
+                <p className="text-[10px] md:text-sm text-white font-bold pl-2 py-1 rounded">{warung.jenis}</p>
+              </div>
               <img
                 src={warung.gambar}
                 alt={warung.nama}
@@ -130,12 +136,12 @@ export default function WarungPage() {
               />
               <div className="p-4 flex flex-col flex-grow">
                 <h2 className="md:text-lg text-sm font-semibold text-gray-800 mb-1">{warung.nama}</h2>
-                <p className="text-[12px] md:text-sm text-gray-600 mb-4">{warung.alamat}</p>
+                <p className="text-[10px] md:text-sm text-gray-600 mb-4">{warung.alamat}</p>
                 <a
                   href={warung.kontak}
-                  className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center"
+                  className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center transition-all"
                 >
-                  + Saya Mau Produk Ini
+                  Mau ini
                 </a>
               </div>
             </div>
