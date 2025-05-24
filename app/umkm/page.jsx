@@ -126,7 +126,7 @@ export default function UmkmPage() {
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
           {warungs.map((warung, index) => (
             <div key={index} className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-              <div className="bg-green-500">
+              <div className="bg-green-600">
                 <p className="text-[10px] md:text-sm text-white font-bold pl-2 py-1 rounded">{warung.jenis}</p>
               </div>
               <img
