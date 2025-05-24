@@ -1,11 +1,11 @@
 'use client'
 
 import { User, Mail, Lock } from 'lucide-react';
-import SidebarLayout from '../components/sidebarLayouts';
+import SidebarUmkm from '../components/sidebarUmkm';
 
 export default function AkunPage() {
   return (
-    <SidebarLayout>
+    <SidebarUmkm>
       <div className="w-full h-full p-4 sm:p-6 overflow-y-auto pt-16">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-2xl font-bold mb-6 text-green-700 text-center"><span className="text-gray-800">Profil</span> Akun</h1>
@@ -20,7 +20,7 @@ export default function AkunPage() {
                   type="text"
                   placeholder="Nama Lengkap"
                   className="w-full bg-transparent outline-none text-gray-700"
-                  defaultValue="Warung ABC"
+                  defaultValue="Kribi"
                 />
               </div>
             </div>
@@ -66,6 +66,6 @@ export default function AkunPage() {
           </p>
         </div>
       </div>
-    </SidebarLayout>
+    </SidebarUmkm>
   );
 }
