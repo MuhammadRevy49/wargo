@@ -42,14 +42,18 @@ export default function LandingPage() {
 
         {/* Desktop menu */}
         <div className="hidden sm:flex space-x-4">
-          <a href="#tentang" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Tentang</a>
           <a href="#Keuntungan" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Keuntungan</a>
+          <a href="#tentang" className={`font-semibold transition py-1 px-2 ${scrolled ? 'text-green-600' : 'text-white'}`}>Tentang</a>
           <button
             onClick={() => setShowModal(true)}
             className="bg-green-600 font-bold text-white hover:bg-green-700 rounded py-1 px-2 transition-all drop-shadow-md"
           >
             Daftar / Masuk
           </button>
+          <div className="absolute top-full mt-1 text-sm bg-gray-700 text-white p-2 rounded w-48 z-10">
+            ingin lanjut? klik masuk.
+          </div>
+
         </div>
 
         {/* Hamburger menu for mobile */}
@@ -86,6 +90,7 @@ export default function LandingPage() {
           >
             Daftar / Masuk
           </button>
+          <p className="text-[12px] text-green-800 bg-green-100 rounded-full pl-2">Ingin Lanjut? klik masuk.</p>
         </nav>
       </motion.div>
 
@@ -182,6 +187,22 @@ export default function LandingPage() {
             title="Catatan Produk"
             desc="Lihat daftar produk UMKM yang dititipkan di warung / toko anda."
           />
+        </div>
+      </section>
+
+      {/* Tentang */}
+      <section id="tentang" className="px-6 py-20 bg-white relative z-10">
+        <h3 className="text-center text-2xl font-bold mb-10 text-green-600"><span className="text-gray-800">Tentang</span> WarGo</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <img src="/images/muhammadrevy.jpeg" className="rounded-lg" />
+          </div>
+          <div>
+            <div className="mb-3">
+              <p>Halo! Nama saya Muhammad Revy Rizqy Pratama Kelas XII SMK Negeri 1 Cimahi Jurusan Sistem Informasi Jaringan dan Aplikasi, Alhamdulillah saya memiliki usaha yang memproduksi keripik rumahan. Ide WarGo lahir dari pengalaman pribadi saya ketika mencoba menitipkan produk ke warung-warung dan toko makanan. Awalnya saya pikir cukup mudah datang, menawarkan, dan produk bisa langsung diterima. Tapi ternyata tidak semudah itu. Bagaimana jika sudah jauh-jauh ke warung, tapi warung menolak karena stok penuh, belum butuh produk baru, atau bahkan tidak saya kenal. Prosesnya menguras tenaga, waktu, dan biaya, padahal skala usaha saya masih kecil. Saya juga melihat banyak pelaku UMKM lain mengalami hal yang sama harus berkeliling dari satu toko ke toko lain tanpa kepastian. Dari situlah saya sadar, kita butuh solusi digital. WarGo saya ciptakan sebagai jembatan antara UMKM makanan/minuman dan warung atau toko kecil agar proses titip jual lebih mudah, cepat, dan efisien. Lewat platform ini, UMKM bisa menawarkan produknya secara online, dan warung bisa memilih mana yang ingin mereka terima. Semoga WarGo bisa membantu banyak pelaku usaha kecil lain yang sedang berjuang seperti saya.</p>
+            </div>
+            <button onClick={() => setShowModal(true)} className="py-2 px-2 bg-green-600 rounded text-white">Pelajari lebih lanjut</button>
+          </div>
         </div>
       </section>
 

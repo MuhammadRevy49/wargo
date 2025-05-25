@@ -58,7 +58,7 @@ export default function Login() {
                                     autoComplete="email"
                                     required
                                     className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm text-black"
-                                    placeholder="Masukkan email"
+                                    placeholder="Tidak usah diisi. (klik aja masuk)"
                                 />
                             </div>
                             <div className="pt-4">
@@ -70,7 +70,7 @@ export default function Login() {
                                     autoComplete="current-password"
                                     required
                                     className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm text-black"
-                                    placeholder="Password"
+                                    placeholder="Tidak usah diisi (klik aja masuk)."
                                 />
                             </div>
                         </div>

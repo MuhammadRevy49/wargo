@@ -39,7 +39,7 @@ export default function WarungDashboard() {
                                         <p className="font-semibold text-gray-800">{product.name}</p>
                                         <p className="text-gray-500">Dari: {product.sender}</p>
                                     </div>
-                                    <button className="p-2 bg-white border border-green-600 text-green-600 rounded hover:bg-green-600 hover:text-white transition-all hover:cursor-pointer">Lapor</button>
+                                    <button className="p-2 bg-white border border-green-600 text-green-600 rounded hover:bg-green-600 hover:text-white transition-all hover:cursor-pointer">Chat</button>
                                 </div>
                             ))}
                         </div>

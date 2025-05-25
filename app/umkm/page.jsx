@@ -141,7 +141,7 @@ export default function UmkmPage() {
                   href={warung.kontak}
                   className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center"
                 >
-                  Hubungi
+                  Ajukan
                 </a>
               </div>
             </div>
