@@ -1,6 +1,6 @@
 'use client'
 
-import { User, Mail, Lock } from 'lucide-react';
+import { User, Mail, Lock, Store } from 'lucide-react';
 import SidebarLayout from '../components/sidebarLayouts';
 
 export default function AkunPage() {
@@ -11,16 +11,29 @@ export default function AkunPage() {
           <h1 className="text-2xl mb-6 text-green-700 text-center"><span className="text-gray-800">Profil</span> Akun</h1>
 
           <div className="bg-white shadow-md rounded-xl p-6 space-y-4">
-            {/* Nama */}
+            {/* Foto Warung */}
             <div>
-              <label className="block mb-1 font-medium text-gray-700">Nama Lengkap</label>
+              <label className="block mb-1 font-medium text-gray-700">Foto Warung</label>
+              <div className="flex items-center space-x-4">
+                <img
+                  src="https://lampost.co/wp-content/uploads/2024/05/IMG-20240507-WA0012.jpg"
+                  alt="Foto Warung"
+                  className="w-20 h-20 rounded-full object-cover border border-gray-300"
+                />
+                <button className="text-sm text-green-600 hover:underline">Ubah Foto</button>
+              </div>
+            </div>
+
+            {/* Nama Toko */}
+            <div>
+              <label className="block mb-1 font-medium text-gray-700">Nama Toko</label>
               <div className="flex items-center border border-gray-200 rounded p-2 bg-gray-50">
-                <User className="w-5 h-5 text-gray-500 mr-2" />
+                <Store className="w-5 h-5 text-gray-500 mr-2" />
                 <input
                   type="text"
-                  placeholder="Nama Lengkap"
+                  placeholder="Nama Toko"
                   className="w-full bg-transparent outline-none text-gray-700"
-                  defaultValue="Warung ABC"
+                  defaultValue="Warung Babeh"
                 />
               </div>
             </div>
@@ -34,7 +47,7 @@ export default function AkunPage() {
                   type="email"
                   placeholder="Email"
                   className="w-full bg-transparent outline-none text-gray-700"
-                  defaultValue="warungabc@example.com"
+                  defaultValue="warungbabeh@gmail.com"
                 />
               </div>
             </div>
@@ -50,6 +63,15 @@ export default function AkunPage() {
                   className="w-full bg-transparent outline-none text-gray-700"
                 />
               </div>
+            </div>
+
+            {/* Status Warung */}
+            <div>
+              <label className="block mb-1 font-medium text-gray-700">Status Menerima Produk UMKM</label>
+              <select className="w-full border border-gray-200 rounded p-2 bg-gray-50 text-gray-700">
+                <option value="ya">Ya, menerima produk</option>
+                <option value="tidak">Tidak menerima produk</option>
+              </select>
             </div>
 
             {/* Simpan Button */}
