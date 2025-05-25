@@ -148,7 +148,7 @@ export default function WarungPage() {
                   href={warung.kontak}
                   className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center transition-all"
                 >
-                  Mau ini
+                  Ajukan
                 </a>
               </div>
             </div>
