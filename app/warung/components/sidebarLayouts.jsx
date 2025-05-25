@@ -29,7 +29,7 @@ export default function SidebarLayout({ children }) {
           <Link href="/warung/pengajuan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><SquareArrowOutUpRight className="mr-2"/>Pengajuan</Link>
           <Link href="/warung/titipan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ClipboardList className="mr-2"/>Titipan</Link>
           <Link href="/warung/akun" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><User className="mr-2"/>Akun</Link>
-          <p className="text-[10px] text-gray-800 p-2 rounded bg-green-100">Note : Jika ingin jadi pemilik warung. masuk ke akun lalu Logout dan login ulang masuk sebagai pemilik warung.</p>
+          <p className="text-[10px] text-gray-800 p-2 rounded bg-green-100">Note : Jika ingin jadi pelaku umkm. masuk ke akun lalu Logout dan login ulang masuk sebagai pemilik warung.</p>
         </div>
       </div>
 
