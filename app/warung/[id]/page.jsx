@@ -3,43 +3,43 @@
 import { useState } from "react";
 import SidebarLayout from "../components/sidebarLayouts";
 import { useParams } from "next/navigation";
-import { X, Eye } from "lucide-react";
+import { X, Eye, ArrowLeft } from "lucide-react";
 
 const produk = [
     {
-      id: 1,
-      nama: "Keripik Basreng",
-      dari: "Keripik Bandung",
-      jenis: "Makanan Snack",
-      harga: "3.000",
-      margin: "1.000",
-      lihat: "10RB+ dilihat oleh Warung",
-      gambar: "https://down-id.img.susercontent.com/file/37376d9518e20493a7677e3fb432c26b",
-      kontak: "#"
+        id: 1,
+        nama: "Keripik Basreng",
+        dari: "Keripik Bandung",
+        jenis: "Makanan Snack",
+        harga: "3.000",
+        margin: "1.000",
+        lihat: "10RB+ dilihat oleh Warung",
+        gambar: "https://down-id.img.susercontent.com/file/37376d9518e20493a7677e3fb432c26b",
+        kontak: "#"
     },
     {
-      id: 2,
-      nama: "Kerupuk Jengkol",
-      dari: "Kedai Kriuk",
-      jenis: "Makanan Snack",
-      harga: "2.000",
-      margin: "500",
-      lihat: "10RB+ dilihat oleh Warung",
-      gambar: "https://homemadeindonesia.com/apihmi/images/datatoko/K29384DE132_brg13613.jpg",
-      kontak: "#"
+        id: 2,
+        nama: "Kerupuk Jengkol",
+        dari: "Kedai Kriuk",
+        jenis: "Makanan Snack",
+        harga: "2.000",
+        margin: "500",
+        lihat: "10RB+ dilihat oleh Warung",
+        gambar: "https://homemadeindonesia.com/apihmi/images/datatoko/K29384DE132_brg13613.jpg",
+        kontak: "#"
     },
     {
-      id: 3,
-      nama: "Roti Sisir",
-      dari: "Kue Meledaks",
-      jenis: "Makanan Kue",
-      harga: "2.000",
-      margin: "500",
-      lihat: "10RB+ dilihat oleh Warung",
-      gambar: "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/17/16dac5c7-2afd-4342-9666-4932e0d732af.jpg",
-      kontak: "#"
+        id: 3,
+        nama: "Roti Sisir",
+        dari: "Kue Meledaks",
+        jenis: "Makanan Kue",
+        harga: "2.000",
+        margin: "500",
+        lihat: "10RB+ dilihat oleh Warung",
+        gambar: "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/17/16dac5c7-2afd-4342-9666-4932e0d732af.jpg",
+        kontak: "#"
     }
-  ];
+];
 
 export default function warungDetail() {
 
@@ -54,7 +54,12 @@ export default function warungDetail() {
     return (
         <SidebarLayout>
             <div className="min-h-screen bg-gray-50 p-4 sm:p-6 pt-16">
-                <a href="/warung" className="p-2 bg-green-600 text-white rounded">Kembali</a>
+                <div className="flex items-center mt-3">
+                    <a href="/warung" className="flex items-center bg-green-600 py-1 pl-1 pr-3 rounded-full text-white transition-all hover:opacity-30">
+                        <ArrowLeft className="h-4" />
+                        Kembali
+                    </a>
+                </div>
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-1 gap-4">
                     <div className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
                         <img

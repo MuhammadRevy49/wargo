@@ -3,7 +3,7 @@
 import { useState } from "react";
 import SidebarUmkm from "../components/sidebarUmkm";
 import { useParams } from "next/navigation";
-import { X, Eye } from "lucide-react";
+import { X, Eye, ArrowLeft } from "lucide-react";
 
 const warung = [
     {
@@ -72,7 +72,12 @@ export default function warungDetail() {
     return (
         <SidebarUmkm>
             <div className="min-h-screen bg-gray-50 p-4 sm:p-6 pt-16">
-                <a href="/umkm" className="p-2 bg-green-600 text-white rounded">Kembali</a>
+                <div className="flex items-center mt-3">
+                    <a href="/umkm" className="flex items-center bg-green-600 py-1 pl-1 pr-3 rounded-full text-white transition-all hover:opacity-30">
+                        <ArrowLeft className="h-4" />
+                        Kembali
+                    </a>
+                </div>
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-1 gap-4">
                     <div className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
                         <img
