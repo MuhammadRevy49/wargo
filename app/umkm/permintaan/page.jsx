@@ -121,8 +121,8 @@ export default function WarungDashboard() {
                     </div>
 
                     {showModal && selectedProduct && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40">
-                            <div className="relative bg-white w-full max-w-md rounded-xl shadow-lg p-6 transform transition-all scale-100 animate-fadeIn">
+                        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/40 transition-opacity duration-300">
+                            <div className="relative bg-white w-full max-w-md rounded-xl shadow-lg p-6 transform transition-all duration-300 opacity-100 scale-100">
                                 <button onClick={closeModal} className="absolute top-3 right-3 text-gray-500 hover:text-gray-300 transition-all">
                                     <X className="w-5 h-5" />
                                 </button>

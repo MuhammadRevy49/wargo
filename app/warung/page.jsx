@@ -51,6 +51,7 @@ export default function WarungPage() {
   // Dummy data
   const warungs = [
     {
+      id: 1,
       nama: "Keripik Basreng",
       alamat: "Jl. K.H. Usman Dhomiri",
       jenis: "Makanan Snack",
@@ -60,6 +61,7 @@ export default function WarungPage() {
       kontak: "#"
     },
     {
+      id: 2,
       nama: "Kerupuk Jengkol",
       alamat: "Jl. Merdeka No. 10",
       jenis: "Makanan Snack",
@@ -69,6 +71,7 @@ export default function WarungPage() {
       kontak: "#"
     },
     {
+      id: 3,
       nama: "Roti Sisir",
       alamat: "Jl. Sukabumi",
       jenis: "Makanan Kue",
@@ -142,13 +145,12 @@ export default function WarungPage() {
               />
               <div className="p-4 flex flex-col flex-grow">
                 <h2 className="md:text-lg text-sm font-semibold text-gray-800 mb-1">{warung.nama}</h2>
-                <p className="text-[10px] md:text-sm text-gray-600">Harga Jual : Rp. {warung.harga}</p>
-                <p className="text-[10px] md:text-sm text-gray-600 mb-4">Margin Toko : Rp. {warung.margin}</p>
+                <p className="text-[10px] md:text-sm text-gray-600 mb-3">Alamat : {warung.alamat}</p>
                 <a
-                  href={warung.kontak}
+                  href={`/warung/${warung.id}`}
                   className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center transition-all"
                 >
-                  Ajukan
+                  Lihat
                 </a>
               </div>
             </div>

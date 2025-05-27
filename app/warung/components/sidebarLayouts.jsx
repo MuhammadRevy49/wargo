@@ -30,7 +30,7 @@ export default function SidebarLayout({ children }) {
           <Link href="/warung/titipan" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><ClipboardList className="mr-2"/>Titipan</Link>
           <Link href="/warung/akun" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><User className="mr-2"/>Akun</Link>
           <p className="text-[10px] text-gray-800 p-2 rounded bg-green-100">Note : Jika ingin jadi pelaku umkm. masuk ke akun lalu Logout dan login ulang masuk sebagai pelaku UMKM.</p>
-          <p className="text-[10px] text-gray-800 p-2 rounded bg-gray-100">Web ini masih prototipe masih dalam pengembangan fitur.</p>
+          <p className="text-[10px] text-gray-800 p-2 rounded bg-gray-100">Web ini masih prototipe masih dalam pengembangan fitur. Fitur belum berjalan dengan sempurna.</p>
         </div>
       </div>
 

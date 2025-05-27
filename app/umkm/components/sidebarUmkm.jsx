@@ -31,7 +31,7 @@ export default function SidebarUmkm({ children }) {
           <Link href="/umkm/produk" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><Box className="mr-2"/>Produk</Link>
           <Link href="/umkm/akun" className="p-2 flex items-center hover:text-white hover:bg-green-600 hover:rounded transition-all border-b border-gray-200"><User className="mr-2"/>Akun</Link>
           <p className="text-[10px] text-gray-800 p-2 rounded bg-green-100">Note : Jika ingin jadi pemilik warung. masuk ke akun lalu Logout dan login ulang masuk sebagai pemilik warung.</p>
-          <p className="text-[10px] text-gray-800 p-2 rounded bg-gray-100">Web ini masih prototipe masih dalam pengembangan fitur.</p>
+          <p className="text-[10px] text-gray-800 p-2 rounded bg-gray-100">Web ini masih prototipe masih dalam pengembangan fitur. Fitur belum berjalan dengan sempurna.</p>
         </div>
       </div>
 

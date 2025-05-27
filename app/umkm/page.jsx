@@ -51,6 +51,7 @@ export default function UmkmPage() {
   // Dummy data
   const warungs = [
     {
+      id: 1,
       nama: "Kantin SMAN 2",
       jenis: "Kantin Sekolah",
       alamat: "Jl. K.H. Usman Dhomiri",
@@ -58,6 +59,7 @@ export default function UmkmPage() {
       kontak: "#"
     },
     {
+      id: 2,
       nama: "Warung Bu Nini",
       jenis: "Warung",
       alamat: "Jl. Merdeka No. 10",
@@ -65,6 +67,7 @@ export default function UmkmPage() {
       kontak: "#"
     },
     {
+      id: 3,
       nama: "Warung Bu Eros",
       jenis: "Toko Kelontong",
       alamat: "Jl. Sukabumi",
@@ -138,10 +141,10 @@ export default function UmkmPage() {
                 <h2 className="md:text-lg text-[10px] font-semibold text-gray-800 mb-1">{warung.nama}</h2>
                 <p className="text-[10px] md:text-sm text-gray-600 mb-4">{warung.alamat}</p>
                 <a
-                  href={warung.kontak}
+                  href={`umkm/${warung.id}`}
                   className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center"
                 >
-                  Ajukan
+                  Lihat
                 </a>
               </div>
             </div>
