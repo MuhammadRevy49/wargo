@@ -9,7 +9,7 @@ const produk = [
     {
       id: 1,
       nama: "Keripik Basreng",
-      alamat: "Jl. K.H. Usman Dhomiri",
+      dari: "Keripik Bandung",
       jenis: "Makanan Snack",
       harga: "3.000",
       margin: "1.000",
@@ -20,7 +20,7 @@ const produk = [
     {
       id: 2,
       nama: "Kerupuk Jengkol",
-      alamat: "Jl. Merdeka No. 10",
+      dari: "Kedai Kriuk",
       jenis: "Makanan Snack",
       harga: "2.000",
       margin: "500",
@@ -31,7 +31,7 @@ const produk = [
     {
       id: 3,
       nama: "Roti Sisir",
-      alamat: "Jl. Sukabumi",
+      dari: "Kue Meledaks",
       jenis: "Makanan Kue",
       harga: "2.000",
       margin: "500",
@@ -65,9 +65,9 @@ export default function warungDetail() {
                         <div className="p-4 flex flex-col flex-grow">
                             <h2 className="md:text-lg text-[16px] font-semibold text-gray-800 mb-1">{dataProduk.nama}</h2>
                             <p className="text-[12px] md:text-sm text-gray-600 mb-2">Jenis : {dataProduk.jenis}</p>
-                            <p className="text-[12px] md:text-sm text-gray-600 mb-2">Alamat : {dataProduk.alamat}</p>
-                            <p className="text-[12px] md:text-sm text-gray-600 mb-2">Harga : {dataProduk.harga}</p>
-                            <p className="text-[12px] md:text-sm text-gray-600 mb-4">Margin Toko : {dataProduk.margin}</p>
+                            <p className="text-[12px] md:text-sm text-gray-600 mb-2">Dari : {dataProduk.dari}</p>
+                            <p className="text-[12px] md:text-sm text-gray-600 mb-2">Harga Jual : Rp. {dataProduk.harga}</p>
+                            <p className="text-[12px] md:text-sm text-gray-600 mb-4">Untung Warung : Rp. {dataProduk.margin}</p>
                             <p className="flex items-center text-[12px] md:text-sm text-gray-400 mb-4"><Eye className="mr-1" /> {dataProduk.lihat}</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <button
@@ -77,10 +77,9 @@ export default function warungDetail() {
                                     Ajukan
                                 </button>
                                 <button
-                                    onClick={() => setModal(true)}
                                     className="mt-auto border border-green-600 text-green-600 bg-white text-sm py-2 px-4 rounded hover:opacity-30 text-center transition-all"
                                 >
-                                    Lihat Lokasi
+                                    Lihat UMKM
                                 </button>
                             </div>
                         </div>
@@ -94,7 +93,7 @@ export default function warungDetail() {
                                     <X onClick={() => setModal(false)} className="text-gray-400 hover:text-gray-600 transition-all" />
                                 </div>
                                 <h1 className="text-gray-800 text-xl text-center mb-3">Ajukan Ke <span className="text-green-600">UMKM</span></h1>
-                                <p className="text-sm text-gray-800 my-6">Apakah Anda Yakin Ingin Produk Ini ?</p>
+                                <p className="text-sm text-gray-800 my-6">Anda ingin mengajukan produk ini dijual di warung anda ?</p>
                                 <div className="grid grid-cols-2 gap-2">
                                     <button onClick={() => setModal(true)} className="bg-green-600 text-white w-full p-2 rounded hover:bg-green-700 transition-all hover:cursor-pointer">Ajukan</button>
                                     <button onClick={() => setModal(false)} className="bg-white text-green-600 w-full p-2 rounded hover:opacity-30 border border-green-600 transition-all hover:cursor-pointer">Batal</button>

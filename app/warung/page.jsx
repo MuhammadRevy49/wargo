@@ -53,7 +53,7 @@ export default function WarungPage() {
     {
       id: 1,
       nama: "Keripik Basreng",
-      alamat: "Jl. K.H. Usman Dhomiri",
+      dari: "Keripik Bandung",
       jenis: "Makanan Snack",
       harga: "3.000",
       margin: "1.000",
@@ -63,7 +63,7 @@ export default function WarungPage() {
     {
       id: 2,
       nama: "Kerupuk Jengkol",
-      alamat: "Jl. Merdeka No. 10",
+      dari: "Kedai Kriuk",
       jenis: "Makanan Snack",
       harga: "2.000",
       margin: "500",
@@ -73,7 +73,7 @@ export default function WarungPage() {
     {
       id: 3,
       nama: "Roti Sisir",
-      alamat: "Jl. Sukabumi",
+      dari: "Kue Meledaks",
       jenis: "Makanan Kue",
       harga: "2.000",
       margin: "500",
@@ -145,7 +145,7 @@ export default function WarungPage() {
               />
               <div className="p-4 flex flex-col flex-grow">
                 <h2 className="md:text-lg text-sm font-semibold text-gray-800 mb-1">{warung.nama}</h2>
-                <p className="text-[10px] md:text-sm text-gray-600 mb-3">Alamat : {warung.alamat}</p>
+                <p className="text-[10px] md:text-sm text-gray-600 mb-3">Dari UMKM : {warung.dari}</p>
                 <a
                   href={`/warung/${warung.id}`}
                   className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center transition-all"
