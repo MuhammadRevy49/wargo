@@ -142,7 +142,7 @@ export default function UmkmPage() {
                 <p className="text-[10px] md:text-sm text-gray-600 mb-4">{warung.alamat}</p>
                 <a
                   href={`umkm/${warung.id}`}
-                  className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center"
+                  className="mt-auto bg-white text-green-600 text-sm py-2 px-4 rounded hover:opacity-30 border border-green-600 transition-all text-center"
                 >
                   Lihat
                 </a>

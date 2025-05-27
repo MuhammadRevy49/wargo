@@ -148,7 +148,7 @@ export default function WarungPage() {
                 <p className="text-[10px] md:text-sm text-gray-600 mb-3">Dari UMKM : {warung.dari}</p>
                 <a
                   href={`/warung/${warung.id}`}
-                  className="mt-auto bg-green-600 text-white text-sm py-2 px-4 rounded hover:bg-green-700 text-center transition-all"
+                  className="mt-auto bg-white text-green-600 text-sm py-2 px-4 rounded hover:opacity-30 border border-green-600 text-center transition-all"
                 >
                   Lihat
                 </a>

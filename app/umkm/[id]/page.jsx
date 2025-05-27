@@ -94,7 +94,6 @@ export default function warungDetail() {
                                     Ajukan
                                 </button>
                                 <button
-                                    onClick={() => setModal(true)}
                                     className="mt-auto border border-green-600 text-green-600 bg-white text-sm py-2 px-4 rounded hover:opacity-30 text-center transition-all"
                                 >
                                     Lihat Lokasi
