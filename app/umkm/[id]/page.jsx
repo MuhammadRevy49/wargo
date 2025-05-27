@@ -82,7 +82,7 @@ export default function warungDetail() {
                         />
                         <div className="p-4 flex flex-col flex-grow">
                             <h2 className="md:text-lg text-[16px] font-semibold text-gray-800 mb-1">{dataWarung.nama}</h2>
-                            <p className="text-[12px] md:text-sm text-gray-600 mb-2">Jenis : {dataWarung.jenis}</p>
+                            <p className="text-[12px] md:text-sm text-gray-600 mb-2">Jenis Toko : {dataWarung.jenis}</p>
                             <p className="text-[12px] md:text-sm text-gray-600 mb-2">Alamat : {dataWarung.alamat}</p>
                             <p className="text-[12px] md:text-sm text-gray-600 mb-4">Status : {dataWarung.status}</p>
                             <p className="flex items-center text-[12px] md:text-sm text-gray-400 mb-4"><Eye className="mr-1" /> {dataWarung.lihat}</p>
